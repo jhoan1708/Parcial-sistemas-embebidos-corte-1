@@ -8,5 +8,5 @@ Responda las siguientes preguntas a continuación:
 los microcontroladores son circuitos integrados programables que contienen todos los componentes en un mismo circuito y los microprocesadores
 son los dispositivos que realizan la funcion de cpu
 
-   *Defina la arquitectura Von Neumann y la Arquitectura de Harvard además:
+   * Defina la arquitectura Von Neumann y la Arquitectura de Harvard además:
    
