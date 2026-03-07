@@ -59,14 +59,73 @@ Memoria
 Entradas y salidas
 Periféricos integrados D y A
 
+### 🕹️ Arquitectura de Arduino (AVR ATmega328P)
+
+```mermaid
+graph TD
+    CPU[🧠 CPU de 8 bits]
+    
+    subgraph Memoria [Estructura de Memoria]
+        Flash[💾 Flash 32KB - Código]
+        SRAM[💾 SRAM 2KB - Variables]
+        EEPROM[💾 EEPROM 1KB - Datos persistentes]
+    end
+
+    subgraph Perifericos [Periféricos e I/O]
+        GPIO[🔌 Pines Digitales/PWM]
+        ADC[📶 ADC 10-bit]
+        UART[📡 Comunicación Serial]
+        Timers[⏱️ Temporizadores]
+    end
+
+    Flash <--> CPU
+    SRAM <--> CPU
+    CPU <--> Perifericos
+    
+    style CPU fill:#f96,stroke:#333
+    style Memoria fill:#e1f5fe,stroke:#01579b
+    style Perifericos fill:#f1f8e9,stroke:#33691e
+```
+
 * # ¿Cuál es la arquitectura del pic 16F887 y sus principales características?
   
 Arquitectura Harvard
 Bus separado para instrucciones y datos
 La mayoría de instrucciones se ejecutan en 1 ciclo de instrucción
 
+### 📟 Arquitectura del PIC 16F887
 
+```mermaid
+graph TD
+    ALU[🧮 Unidad Aritmético Lógica]
+    W[📥 Registro de Trabajo - W]
+    
+    subgraph Procesador [Núcleo del PIC]
+        PC[📍 Contador de Programa]
+        Stack[📚 Pila de 8 niveles]
+    end
 
+    subgraph Memoria [Organización]
+        Prog[💾 Memoria de Programa 8K]
+        RAM[💾 RAM de Datos 368 bytes]
+    end
+
+    subgraph Modulos [Módulos Especiales]
+        MSSP[🔗 SPI / I2C]
+        ECCP[🎮 PWM Comparación/Captura]
+        Comp[⚖️ Comparadores]
+    end
+
+    Prog --> PC
+    PC --> ALU
+    W <--> ALU
+    ALU <--> RAM
+    ALU <--> Modulos
+
+    style ALU fill:#ffcc80,stroke:#e65100
+    style Procesador fill:#f3e5f5,stroke:#4a148c
+    style Memoria fill:#e8f5e9,stroke:#1b5e20
+```
 
 # parte 2
 
