@@ -158,11 +158,18 @@ PyTorch
 * Reconocimiento de la velocidad de las personas en el laboratorio, Para detectar si las personas se mueven muy rápido se puede usar MediaPipe Pose.
 * Paso 1: Obtener coordenadas del cuerpo, mediaPipe devuelve coordenadas: (x , y , z)
 
-Paso 2: Calcular desplazamiento, se guarda la posición anterior y la actual.
+* Paso 2: Calcular desplazamiento, se guarda la posición anterior y la actual.
 
-velocidad = distancia / tiempo
-El método consiste en calcular el desplazamiento entre frames.
-distancia = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+velocidad = distancia / tiempo. El método consiste en calcular el desplazamiento entre frames.
+
+* Paso 3: Clasificación de movimiento, Se puede definir un umbral.
+
+Ejemplo:
+
+Velocidad	         Clasificación
+< 0.02	            Movimiento normal
+0.02 - 0.05	         Movimiento rápido
+> 0.05	            Movimiento peligroso
 
 * # ¿Cómo haría un despliegue en una plataforma web o móvil?
   
