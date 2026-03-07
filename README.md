@@ -167,8 +167,11 @@ velocidad = distancia / tiempo. El método consiste en calcular el desplazamient
 Ejemplo:
 
 Velocidad	         Clasificación
+
 < 0.02	            Movimiento normal
+
 0.02 - 0.05	         Movimiento rápido
+
 > 0.05	            Movimiento peligroso
 
 * # ¿Cómo haría un despliegue en una plataforma web o móvil?
