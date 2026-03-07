@@ -213,7 +213,7 @@ La página puede mostrar:
 ```mermaid
 graph TD
     %% Definición de los nodos
-    A[📷 Cámara del Laboratorio] --> B(🐍 Procesamiento con Python)
+    A[📷 Cámara del Laboratorio] --> B(🐍 Procesamiento con Python (OpenCV + MediaPipe + IA))
     
     subgraph IA [Cerebro de Inteligencia Artificial]
         B --> B1{🔍 Detección de Objetos}
@@ -224,7 +224,6 @@ graph TD
     B1 & B2 & B3 --> C[🚀 Servidor FastAPI/Flask]
     
     C --> D[🌐 Plataforma Web]
-    C --> E[📱 Aplicación Móvil]
 
     %% Estilos de los bloques
     style A fill:#f9f,stroke:#333,stroke-width:2px
