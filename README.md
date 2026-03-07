@@ -140,55 +140,25 @@ Para que el sistema pueda reconocer herramientas y objetos del laboratorio, prim
 
 * Paso 1: Identificación de los elementos
 
-Se deben definir los objetos que el sistema reconocerá. Por ejemplo:
-
-Osciloscopio
-
-Multímetro
-
-Fuente de poder
-
-Router
-
-Switch
-
-Cables de red
-
-Protoboard
-
-Antenas
-
-Computadores
+Se deben definir los objetos que el sistema reconocerá. Por ejemplo: osciloscopio, multímetro, fuente de poder, router switch, cables de red protoboard, antenas y computadores
 
 * Paso 2: Captura de imágenes
 
 Se deben tomar fotografías reales en el laboratorio.
 
-* Buenas prácticas:
+* Buenas prácticas: tomar entre 100 y 300 imágenes por objeto
 
-Tomar entre 100 y 300 imágenes por objeto
+* Variar: angulos, iluminación, distancia y fondo
 
-* Variar:
-
-Ángulos
-
-Iluminación
-
-Distancia
-
-Fondo
-
-* Paso 3: Etiquetado de imágenes
-
-Cada imagen debe estar clasificada por su tipo de objeto.
+* Paso 3: Etiquetado de imágenes, cada imagen debe estar clasificada por su tipo de objeto.
 
 Herramientas recomendadas:
 
-LabelImg
+* ### LabelImg
 
-Roboflow
+* ### Roboflow
 
-CVAT
+* ### CVAT
 
 Las etiquetas permiten entrenar el modelo de reconocimiento.
 
@@ -198,17 +168,13 @@ Antes del entrenamiento se realizan:
 
 Redimensionamiento (por ejemplo 224x224)
 
-Normalización
+Normalización, y eliminación de ruido Con librerías como:
 
-Eliminación de ruido
+* ### OpenCV
 
-Con librerías como:
+* ### TensorFlow
 
-OpenCV
-
-TensorFlow
-
-PyTorch
+* ### PyTorch
 
 * # ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
 
