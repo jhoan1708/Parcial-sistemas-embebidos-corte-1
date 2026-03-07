@@ -189,11 +189,9 @@ graph LR
     style C fill:#dfd,stroke:#333,stroke-width:2px
     style D fill:#ffd,stroke:#333,stroke-width:4px
 
-
-
 | Backend | Frontend |
 | :--- | :--- |
 | Python | HTML |
 | Flask | CSS |
 | FastAPI | JavaScript |
-|  | React |
+| 0 | React |
