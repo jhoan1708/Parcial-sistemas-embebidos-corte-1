@@ -174,9 +174,9 @@ Ejemplo:
 
 * # ¿Cómo haría un despliegue en una plataforma web o móvil?
   
-* Arquitectura:
+  
 
-## ⛓️ Cadena de Proceso del Sistema
+## Arquitectura
 
 ```mermaid
 graph LR
