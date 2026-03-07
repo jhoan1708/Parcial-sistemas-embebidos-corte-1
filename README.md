@@ -174,3 +174,6 @@ Ejemplo:
 
 * # ¿Cómo haría un despliegue en una plataforma web o móvil?
   
+* Arquitectura:
+
+| Cámara | | → | | Sistema de visión | | → | | API | | → | | Interfaz Web |
