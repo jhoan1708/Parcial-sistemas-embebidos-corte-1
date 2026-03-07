@@ -74,7 +74,7 @@ Plantee una solución paso a paso de las situaciones descritas con loaprendido e
 
 El propósito de los estudiantes de ingeniería de telecomunicaciones decompensar es el planteamiento de una plataforma que permita elreconocimiento de las herramientas que existen en un laboratorio y también alas personas que están en el mismo donde se observe si se movilizan a unavelocidad prudente o si están generando movimientos muy rápidos por medio desistemas embebidos. Formule de manera robusta lo siguiente: 
 
-* # ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
+* ## ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
 
 * Desarrollo de una base de datos con imágenes de los elementos del laboratorio
 Para que el sistema pueda reconocer herramientas y objetos del laboratorio, primero es necesario crear un conjunto de datos (dataset) de imágenes.
@@ -152,6 +152,21 @@ TensorFlow
 PyTorch
 
 * # ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
+
+La librería MediaPipe permite realizar reconocimiento de objetos y detección en tiempo real usando cámaras.
+
+* Paso 1: Instalación de librerías
+
+```bash
+# La base para procesar imágenes y video
+pip install opencv-python
+
+# El motor de IA para detección de personas y manos (MediaPipe)
+pip install mediapipe
+
+# El framework de redes neuronales de Google
+pip install tensorflow
+```
 
 * # ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
 
