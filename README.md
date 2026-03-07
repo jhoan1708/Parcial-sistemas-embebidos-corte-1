@@ -187,6 +187,16 @@ while True:
 cap.release()
 cv2.destroyAllWindows()
 ```
+Paso 3: Integración con MediaPipe, permite detectar personas y posiciones del cuerpo mediante Pose Detection.
+
+```bash
+import mediapipe as mp
+
+mp_pose = mp.solutions.pose
+pose = mp_pose.Pose()
+
+results = pose.process(frame)
+```
 
 * # ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
 
@@ -209,8 +219,6 @@ Ejemplo:
 
 * # ¿Cómo haría un despliegue en una plataforma web o móvil?
   
-  
-
 ## Arquitectura
 
 ```mermaid
