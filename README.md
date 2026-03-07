@@ -74,14 +74,95 @@ Plantee una solución paso a paso de las situaciones descritas con loaprendido e
 
 El propósito de los estudiantes de ingeniería de telecomunicaciones decompensar es el planteamiento de una plataforma que permita elreconocimiento de las herramientas que existen en un laboratorio y también alas personas que están en el mismo donde se observe si se movilizan a unavelocidad prudente o si están generando movimientos muy rápidos por medio desistemas embebidos. Formule de manera robusta lo siguiente: 
 
-* ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
+* # ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
 
 * Desarrollo de una base de datos con imágenes de los elementos del laboratorio
 Para que el sistema pueda reconocer herramientas y objetos del laboratorio, primero es necesario crear un conjunto de datos (dataset) de imágenes.
 
-* ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
+* Paso 1: Identificación de los elementos
 
-*  ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
+Se deben definir los objetos que el sistema reconocerá. Por ejemplo:
 
-*  ¿Cómo haría un despliegue en una plataforma web o móvil?
+Osciloscopio
+
+Multímetro
+
+Fuente de poder
+
+Router
+
+Switch
+
+Cables de red
+
+Protoboard
+
+Antenas
+
+Computadores
+
+* Paso 2: Captura de imágenes
+
+Se deben tomar fotografías reales en el laboratorio.
+
+* Buenas prácticas:
+
+Tomar entre 100 y 300 imágenes por objeto
+
+* Variar:
+
+Ángulos
+
+Iluminación
+
+Distancia
+
+Fondo
+
+* Paso 3: Etiquetado de imágenes
+
+Cada imagen debe estar clasificada por su tipo de objeto.
+
+Herramientas recomendadas:
+
+LabelImg
+
+Roboflow
+
+CVAT
+
+Las etiquetas permiten entrenar el modelo de reconocimiento.
+
+* Paso 4: Preprocesamiento de imágenes
+
+Antes del entrenamiento se realizan:
+
+Redimensionamiento (por ejemplo 224x224)
+
+Normalización
+
+Eliminación de ruido
+
+Con librerías como:
+
+OpenCV
+
+TensorFlow
+
+PyTorch
+
+* # ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
+
+* # ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
+
+* Reconocimiento de la velocidad de las personas en el laboratorio, Para detectar si las personas se mueven muy rápido se puede usar MediaPipe Pose.
+* Paso 1: Obtener coordenadas del cuerpo, mediaPipe devuelve coordenadas: (x , y , z)
+
+Paso 2: Calcular desplazamiento, se guarda la posición anterior y la actual.
+
+velocidad = distancia / tiempo
+El método consiste en calcular el desplazamiento entre frames.
+distancia = math.sqrt((x2-x1)**2 + (y2-y1)**2)
+
+* # ¿Cómo haría un despliegue en una plataforma web o móvil?
   
