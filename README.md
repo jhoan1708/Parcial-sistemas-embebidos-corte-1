@@ -198,3 +198,38 @@ Tecnologías recomendadas:
 | Flask | CSS  |
 | FastAPI | JavaScript  |
 
+La página puede mostrar:
+
+* Video en tiempo real
+
+* Objetos detectados
+
+* Velocidad de personas
+
+* Alertas
+
+## Arquitectura completa del sistema
+
+```mermaid
+graph TD
+    %% Definición de los nodos
+    A[📷 Cámara del Laboratorio] --> B(🐍 Procesamiento con Python)
+    
+    subgraph IA [Cerebro de Inteligencia Artificial]
+        B --> B1{🔍 Detección de Objetos}
+        B --> B2{👥 Detección de Personas}
+        B --> B3{⚡ Cálculo de Velocidad}
+    end
+
+    B1 & B2 & B3 --> C[🚀 Servidor FastAPI/Flask]
+    
+    C --> D[🌐 Plataforma Web]
+    C --> E[📱 Aplicación Móvil]
+
+    %% Estilos de los bloques
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style IA fill:#f0faff,stroke:#007bff,stroke-dasharray: 5 5
+    style C fill:#dfd,stroke:#333,stroke-width:2px
+    style D fill:#fff9c4,stroke:#fbc02d
+    style E fill:#fff9c4,stroke:#fbc02d
+```
