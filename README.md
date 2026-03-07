@@ -188,3 +188,13 @@ graph LR
     style B fill:#bbf,stroke:#333,stroke-width:2px
     style C fill:#dfd,stroke:#333,stroke-width:2px
     style D fill:#ffd,stroke:#333,stroke-width:4px
+```
+
+Tecnologías recomendadas:
+
+| Backend | Frontend |
+| :--- | :--- |
+| Python | HTML |
+| Flask | CSS  |
+| FastAPI | JavaScript  |
+
