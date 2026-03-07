@@ -168,6 +168,26 @@ pip install mediapipe
 pip install tensorflow
 ```
 
+* Paso 2: Captura de video desde la cámara
+
+```bash
+#python
+import cv2
+
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+    
+    cv2.imshow("Camara Laboratorio", frame)
+
+    if cv2.waitKey(1) & 0xFF == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+```
+
 * # ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
 
 * Reconocimiento de la velocidad de las personas en el laboratorio, Para detectar si las personas se mueven muy rápido se puede usar MediaPipe Pose.
