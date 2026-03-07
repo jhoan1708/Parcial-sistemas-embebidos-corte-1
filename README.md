@@ -59,7 +59,7 @@ Memoria
 Entradas y salidas
 Periféricos integrados D y A
 
-### 🕹️ Arquitectura de Arduino (AVR ATmega328P)
+### 🕹️ Arquitectura de Arduino
 
 ```mermaid
 graph TD
