@@ -305,3 +305,42 @@ graph TD
 
 
 * ### Crear un algoritmo sencillo que solo me muestre puntos en el pulgar
+
+Generamos un algoritmo de prueba par ejecutar en visual stede code y validar que la camara si nos permita, pero primero intalamos la libreria de 
+
+```bash
+pip install mediapipe
+```
+
+despues subimos nuestro algoritmo a visual 
+
+```bash
+import cv2
+
+# Abrir cámara
+cap = cv2.VideoCapture(0)
+
+while True:
+    ret, frame = cap.read()
+
+    if not ret:
+        print("No se pudo abrir la cámara")
+        break
+
+    # Mostrar cámara
+    cv2.imshow("Camara", frame)
+
+    tecla = cv2.waitKey(1) & 0xFF
+
+    # Presionar 'f' para tomar foto
+    if tecla == ord('f'):
+        cv2.imwrite("foto_pulgar.jpg", frame)
+        print("Foto guardada")
+
+    # Presionar ESC para salir
+    if tecla == 27:
+        break
+
+cap.release()
+cv2.destroyAllWindows()
+```
