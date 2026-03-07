@@ -300,3 +300,8 @@ graph TD
     style D fill:#fff9c4,stroke:#fbc02d
     style E fill:#fff9c4,stroke:#fbc02d
 ```
+
+# Parte Empírica
+
+
+* ### Crear un algoritmo sencillo que solo me muestre puntos en el pulgar
