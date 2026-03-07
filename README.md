@@ -177,3 +177,5 @@ Ejemplo:
 * Arquitectura:
 
 | Cámara | → | Sistema de visión | → | API | → | Interfaz Web |
+| :--- | :--- |
+
