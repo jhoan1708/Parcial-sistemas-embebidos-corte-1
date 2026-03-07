@@ -213,7 +213,7 @@ La página puede mostrar:
 ```mermaid
 graph TD
     %% Definición de los nodos
-    A[📷 Cámara del Laboratorio] --> B(🐍 Procesamiento con Python (OpenCV + MediaPipe + IA))
+    A[📷 Cámara del Laboratorio] --> B🐍 Procesamiento con Python (OpenCV + MediaPipe + IA)
     
     subgraph IA [Cerebro de Inteligencia Artificial]
         B --> B1{🔍 Detección de Objetos}
