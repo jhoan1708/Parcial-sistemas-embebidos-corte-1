@@ -76,6 +76,9 @@ El propósito de los estudiantes de ingeniería de telecomunicaciones decompensa
 
 * ¿Cómo plantearía el desarrollo de una base de datos con imágenes de los diferentes elementos de un laboratorio de telecomunicaciones?
 
+* Desarrollo de una base de datos con imágenes de los elementos del laboratorio
+Para que el sistema pueda reconocer herramientas y objetos del laboratorio, primero es necesario crear un conjunto de datos (dataset) de imágenes.
+
 * ¿Cómo crearía un sistema clasificador de elementos con la librería media pipe?
 
 *  ¿Cómo reconocería el sistema la velocidad de las personas en el laboratorio?
