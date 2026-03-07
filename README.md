@@ -176,6 +176,16 @@ Ejemplo:
   
 * Arquitectura:
 
-| Cámara | → | Sistema de visión | → | API | → | Interfaz Web |
-| :--- | :--- |
+## ⛓️ Cadena de Proceso del Sistema
+
+```mermaid
+graph LR
+    A[📷 Cámara] --> B{🧠 Sistema de Visión}
+    B --> C[🔌 API REST/FastAPI]
+    C --> D[🌐 Interfaz Web]
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#dfd,stroke:#333,stroke-width:2px
+    style D fill:#ffd,stroke:#333,stroke-width:4px
 
