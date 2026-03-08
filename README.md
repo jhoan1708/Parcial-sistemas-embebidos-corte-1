@@ -348,3 +348,62 @@ cv2.destroyAllWindows()
 Imagen capturada por el algoritmo:
 
 ![foto prueba](foto_1.jpg)
+
+Generamos el codigo definito debemod de intalar las librerias primero 
+
+
+```bash
+pip install opencv-python mediapipe
+```
+
+```bash
+import cv2
+import mediapipe as mp
+
+# Inicializar la detección de manos
+mp_hands = mp.solutions.hands
+hands = mp_hands.Hands()
+
+# Abrir la cámara
+cap = cv2.VideoCapture(0)
+
+while True:
+
+    # Leer imagen de la cámara
+    ret, frame = cap.read()
+
+    # Voltear la imagen como espejo
+    frame = cv2.flip(frame, 1)
+
+    # Convertir imagen de BGR a RGB
+    rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+
+    # Procesar la imagen para detectar la mano
+    results = hands.process(rgb)
+
+    # Si detecta una mano
+    if results.multi_hand_landmarks:
+        for hand in results.multi_hand_landmarks:
+
+            h, w, c = frame.shape
+
+            # Puntos del pulgar
+            puntos_pulgar = [1,2,3,4]
+
+            for punto in puntos_pulgar:
+
+                x = int(hand.landmark[punto].x * w)
+                y = int(hand.landmark[punto].y * h)
+
+                # Dibujar punto
+                cv2.circle(frame,(x,y),10,(0,255,0),-1)
+
+    # Mostrar imagen
+    cv2.imshow("Deteccion de pulgar", frame)
+
+    # Salir con ESC
+    if cv2.waitKey(1) == 27:
+        break
+```
+
+
