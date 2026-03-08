@@ -345,4 +345,6 @@ cap.release()
 cv2.destroyAllWindows()
 ```
 
-"C:\Users\MONTAÑEZ\Desktop"
+Imagen capturada por el algoritmo:
+
+![foto prueba](foto_1.jpg)
